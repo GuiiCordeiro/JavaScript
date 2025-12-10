@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONU</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual país você nasceu? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function verificar(){
+        var pais = document.getElementById('txtpais').value
+        var res = document.getElementById('res')
+        res.innerHTML = `<p>País de nascimento: ${pais}</p>`
+        if(pais == 'brasil'){
+            res.innerHTML += `<p>Você é brasileiro</p>`
+        }
+        else{
+            res.innerHTML += `<p>Você é estrangeiro</p>`    
+        }
+    }   
+    </script>
+</body>
+</html>
